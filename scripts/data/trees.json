@@ -6,104 +6,104 @@
             "fact1": "Ash trees grow very tall, up to 40 metres high!",
             "fact2": "The wood is used to make handles for tools and sports equipment",
             "fact3": "This tree can live for 200 years",
-            "leafImage": "/images/ash-tree-leaf.jpg",
-            "treeImage": "/images/ash-tree.jpg"
+            "leafImage": "images/ash-tree-leaf.jpg",
+            "treeImage": "images/ash-tree.jpg"
         },
         {
             "name": "Beech",
             "fact1": "Beech tree bark is smooth and grey",
             "fact2": "This tree can live for 350 years",
             "fact3": "The trunk of the Pollok Park beech tree is 7 metres wide in places!",
-            "leafImage": "/images/beech-tree-leaf.jpg",
-            "treeImage": "/images/beech-tree.jpg"
+            "leafImage": "images/beech-tree-leaf.jpg",
+            "treeImage": "images/beech-tree.jpg"
         },
         {
             "name": "Hazel",
             "fact1": "It has smooth, shiny brown bark with yellow openings called lenticels",
             "fact2": "The tree has long , yellow flowers called catkins",
             "fact3": "Hazelnuts are used to make Nutella and other chocolate spreads!",
-            "leafImage": "/images/hazel-tree-leaf.jpg",
-            "treeImage": "/images/hazel-tree.jpg"
+            "leafImage": "images/hazel-tree-leaf.jpg",
+            "treeImage": "images/hazel-tree.jpg"
         },
         {
             "name": "Lodgepole Pine",
             "fact1": "This tree is thin with a narrow top",
             "fact2": "Its cones have prickly scales",
             "fact3": "In America, Native Americans used the straight trunk to make their lodges or wigwams!",
-            "leafImage": "/images/lodgepole-pine-leaf.jpg",
-            "treeImage": "/images/lodgepole-pine-tree.jpg"
+            "leafImage": "images/lodgepole-pine-leaf.jpg",
+            "treeImage": "images/lodgepole-pine-tree.jpg"
         },
         {
             "name": "Norway Spruce",
             "fact1": "It has smooth, grey-brown bark with a rusty tint",
             "fact2": "This tree lives for 200 years",
             "fact3": "This tree is musical! It's wood is used to make parts of violins",
-            "leafImage": "/images/norway-spruce-leaf.jpg",
-            "treeImage": "/images/norway-spruce-tree.jpg"
+            "leafImage": "images/norway-spruce-leaf.jpg",
+            "treeImage": "images/norway-spruce-tree.jpg"
         },
         {
             "name": "Oak",
             "fact1": "This majestic tree lives for 800 years!",
             "fact2": "Its wood is used to build ships, furniture and barrels",
             "fact3": "This tree was special to ancient Druids",
-            "leafImage": "/images/oak-tree-leaf.jpg",
-            "treeImage": "/images/oak-tree.jpg"
+            "leafImage": "images/oak-tree-leaf.jpg",
+            "treeImage": "images/oak-tree.jpg"
         },
         {
             "name": "Rowan",
             "fact1": "This tree grows higher up in the mountains than any other Scottish native tree",
             "fact2": "Birds love to eat its bright red berries in autumn",
             "fact3": "People used to plant this tree outside houses and churches for protection and luck",
-            "leafImage": "/images/rowan-tree-leaf.jpg",
-            "treeImage": "/images/rowan-tree.jpg"
+            "leafImage": "images/rowan-tree-leaf.jpg",
+            "treeImage": "images/rowan-tree.jpg"
         },
         {
             "name": "Scots Pine",
             "fact1": "This is Scotland's national tree!",
             "fact2": "It is a pioneer tree because it can live and regrow in poor soil",
             "fact3": "The 'King of the Forest' in Perthshire has the largest tree trunk in the UK!",
-            "leafImage": "/images/scots-pine-leaf.jpg",
-            "treeImage": "/images/scots-pine-tree.jpg"
+            "leafImage": "images/scots-pine-leaf.jpg",
+            "treeImage": "images/scots-pine-tree.jpg"
         },
         {
             "name": "Silver Birch",
             "fact1":"It has papery, peeling, silver-white bark" ,
             "fact2": "It has triangular leaves that turn yellow in autumn",
             "fact3": "This tree is very hardy and can survive in places that other trees can't",
-            "leafImage": "/images/silver-birch-leaf.jpg",
-            "treeImage": "/images/silver-birch-tree.jpg"
+            "leafImage": "images/silver-birch-leaf.jpg",
+            "treeImage": "images/silver-birch-tree.jpg"
         },
         {
             "name": "Sycamore",
             "fact1": "This tree lives for 200 years",
             "fact2": "It has winged seeds that spin like helicopter blades as they fall!",
             "fact3": "People used to plant this tree to protect farmhouses from strong, salty winds",
-            "leafImage": "/images/sycamore-leaf.jpg",
-            "treeImage": "/images/sycamore-tree.jpg"
+            "leafImage": "images/sycamore-leaf.jpg",
+            "treeImage": "images/sycamore-tree.jpg"
         },
         {
             "name": "Western Hemlock",
             "fact1": "This tree has a droopy appearance",
             "fact2": "This tree lives for 500 years",
             "fact3": "It has many small cones that are shaped like eggs",
-            "leafImage": "/images/western-hemlock-leaf.jpg",
-            "treeImage": "/images/western-hemlock-tree.jpg"
+            "leafImage": "images/western-hemlock-leaf.jpg",
+            "treeImage": "images/western-hemlock-tree.jpg"
         },
         {
             "name": "Wild Cherry",
             "fact1": "Its pinkish-brown wood is used to make musical instruments and furniture",
             "fact2": "Birds love to eat its fruit",
             "fact3": "People should not eat the fruit. The leaves, twigs, and seeds are poisonous",
-            "leafImage": "/images/wild-cherry-leaf.jpg",
-            "treeImage": "/images/wild-cherry-tree.jpg"
+            "leafImage": "images/wild-cherry-leaf.jpg",
+            "treeImage": "images/wild-cherry-tree.jpg"
         },
         {
             "name": "Yew",
             "fact1": "This tree can live for 5,000 years!",
             "fact2": "Every part of this tree is poisonous to people and cattle, but not to deer or rabbits",
             "fact3": "The Fortingall yew tree near Aberfeldy is one of the oldest trees in Europe",
-            "leafImage": "/images/yew-tree-leaf.jpg",
-            "treeImage": "/images/yew-tree.jpg"
+            "leafImage": "images/yew-tree-leaf.jpg",
+            "treeImage": "images/yew-tree.jpg"
         }
         ]
 }
