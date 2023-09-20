@@ -1,0 +1,478 @@
+/* ------------------- */
+/*---Global Variables--*/
+/* ------------------- */
+
+:root {
+    --font-color: #4A3120;
+    --header-color: #923332;
+    --main-green: #93DA9D;
+    --bg-color: #4d96b9;
+    --dark-green: #59B465;
+
+
+    --header-font: 'Cabin Sketch', sans-serif;
+    --text-font: 'Sniglet', sans-serif;
+    --tree-name-font: 'Chewy', sans-serif;
+}
+
+.white-text {
+    font-family: var(--text-font);
+    color: white;
+}
+
+
+
+/* ----------------------------- */
+/*---Reset margins and padding--*/
+/* --------------------------- */
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/* ------------------- */
+/*---Body Styling---*/
+/* ------------------- */
+
+body {
+    background-color: var(--main-green);
+}
+
+
+
+/* ------------------- */
+/*-------Header--------*/
+/* ------------------- */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+h1 {
+    font-family: var(--header-font);
+    font-size: 7rem;
+    font-weight: bold;
+    color: var(--header-color);
+}
+
+.home-btn {
+    width: 160px;
+    aspect-ratio: 1 / 1;
+    margin-top: 1rem;
+    flex: 0 0 auto;
+    animation: pulse 2s ease-in-out infinite alternate;
+}
+
+@keyframes pulse {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.1);
+    }
+}
+
+.home-btn img {
+    width: 100%;
+}
+
+
+
+/* ------------------- */
+/*---Page Container----*/
+/* ------------------- */
+
+.container {
+    max-width: 1280px;
+    margin: auto;
+}
+
+
+
+/* ------------------- */
+/*------Dropdown-------*/
+/* ------------------- */
+
+.tree-picker {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    margin-left: 2rem;
+    margin-bottom: 3rem;
+}
+
+label {
+    font-size: 1.5rem;
+    font-family: var(--text-font);
+    color: var(--font-color);
+}
+
+select {
+    appearance: none;
+    cursor: pointer;
+    background-image: url(../icons/arrow.svg);
+    background-repeat: no-repeat;
+    background-position: 95% 60%;
+    background-size: 2rem;
+    border-radius: 25px;
+    font-size: 1.5rem;
+    background-color: var(--bg-color);
+    padding: 15px;
+    border: none;
+    box-shadow: 3px 3px 5px rgb(0 0 0 / 0.3);
+}
+
+
+
+/* ------------------- */
+/*-----Info Section----*/
+/* ------------------- */
+
+.tree-info {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+
+
+/* ------------------- */
+/*-----Tree Images-----*/
+/* ------------------- */
+
+.tree-images {
+    display: flex;
+    flex-direction: column;
+}
+
+.image-window {
+    width: 300px;
+    height: 300px; 
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+    border: 10px solid var(--dark-green);
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.image-window img {
+    width: 100%;
+}
+
+.image-buttons {
+    display: flex;
+    gap: 1rem;
+    width: 300px;
+    margin-left: 2rem;
+}
+
+.tree-image-button {
+    width: 50%;
+    background-color: var(--bg-color);
+    border: 5px solid var(--dark-green);
+    border-radius: 25px;
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.tree-image-button:hover,
+.tree-image-button:focus {
+    background-color: #337291;
+}
+
+.tree-image-button:hover {
+    transform: scale(1.1);
+}
+
+.tree-image-button img {
+    width: 50%;
+}
+
+
+
+/* ------------------- */
+/*-----Tree Facts------*/
+/* ------------------- */
+
+.tree-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--dark-green);
+    flex-grow: 1;
+    margin-right: 2rem;
+    border-radius: 25px;
+    padding: 20px;
+}
+
+.tree-name {
+    font-family: var(--tree-name-font);
+    color: var(--font-color);
+    font-size: 4rem;
+    letter-spacing: 0.3rem;;
+}
+
+.tree-fact {
+    font-family: var(--text-font);
+    font-size: clamp(1.5rem, 2.5vw, 3rem);
+    text-align: center;
+    color: #263838;
+}
+
+
+
+/* ------------------- */
+/*---Challenge Button--*/
+/* ------------------- */
+
+.challenge-prompt-btn {
+    display: flex;
+    justify-content: space-around;
+    width: 61vw;
+    height: 10vw;
+    margin-top: 2rem;
+    margin-right: 2rem;
+    margin-left: auto;
+    margin-bottom: 2rem;
+    border: none;
+    border-radius: 25px; 
+    padding: 10px;
+    background-color: var(--bg-color);
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+
+.challenge-prompt-btn:hover,
+.challenge-prompt-btn:focus {
+    background-color: #337291;
+}
+
+
+.challenge-prompt-btn img {
+    height: 100%;
+    transition: .5s ease-in-out;
+
+}
+
+.challenge-prompt-btn span {
+    font-size: 5cqw;
+    align-self: center;   
+}
+
+.challenge-prompt-btn:hover img,
+.challenge-prompt-btn:focus img {
+    transform: scale(1.5);
+}
+
+
+
+/* ------------------- */
+/*---Challenge Screen--*/
+/* ------------------- */
+
+.challenge-screen {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    z-index: 10;
+    background-color: var(--bg-color);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    letter-spacing: 0.1rem;
+}
+
+.challenge-screen.inactive {
+    display: none;
+}
+
+.flex-container {
+    display: flex;
+    gap: 2rem;
+    margin: 0 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.character {
+    height: 40vw;
+}
+
+.character img {
+    height: 100%;
+}
+
+.text p {
+    font-size: clamp(1.5rem, 3vw, 3rem);
+}
+
+.text p:first-child {
+    margin-bottom: 3rem;
+}
+
+.close-btn {
+    width: 70px;
+    aspect-ratio: 1 / 1;
+    background: none;
+    border: none;
+    align-self: flex-end;
+    margin-right: 2rem;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    transform: scale(1.2);
+}
+
+.close-btn img {
+    width: 100%;
+}
+
+.challenge-text {
+    font-family: var(--tree-name-font);
+    color: var(--font-color);
+}
+
+.challenge-image-container {
+    display: flex;
+    gap: 2rem;
+    margin-right: 2rem;
+    margin-top: 2rem;
+}
+
+.challenge-image {
+    width: 50%;
+}
+
+.challenge-image img {
+    width: 100%;
+    border-radius: 2vw;
+    border: 1vw solid #337291;
+}
+
+
+
+/* ------------------- */
+/*----Media Queries----*/
+/* ------------------- */
+
+@media screen and (max-width: 1080px) {
+    h1 {
+        font-size: 5rem;
+    }
+}
+
+@media screen and (max-width: 820px) {
+    .tree-picker {
+        margin-top: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .flex-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .flex-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .character {
+        transform: translateX(20%);
+    }
+
+    .text {
+        text-align: center;
+    }
+
+    .challenge-image-container {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 800px) and (min-width: 620px) {
+    .challenge-image {
+        width: 25%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .tree-picker {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    .tree-info {
+        flex-direction: column;
+        align-items: center;
+     }
+
+     .tree-images {
+        align-items: center;
+    }
+    
+    .image-window {
+        width: 80%;
+        height: auto;
+        aspect-ratio: 1 / 1;
+        margin: 0;
+        margin-bottom: 1rem;
+    }
+
+    .image-buttons {
+        width: 70vw;
+        margin: 0;
+    }
+
+    .tree-text {
+        margin-right: 0;
+        width: 100%;
+        border-radius: 0;
+        gap: 1rem;
+    }
+
+    .tree-fact:last-child {
+        margin-bottom: 1rem;
+    }
+
+    .challenge-prompt-btn {
+        width: 85vw;
+        height: 20vw;
+        margin-right: auto;
+    }
+}
+
+@media screen and (max-width: 620px) {
+    h1 {
+        font-size: 4rem;
+    }
+
+    header {
+        align-items: flex-start;
+    }
+
+    .home-btn {
+        width: 140px;
+    }
+}

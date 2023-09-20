@@ -1,0 +1,355 @@
+/* ------------------- */
+/*---Global Variables--*/
+/* ------------------- */
+
+:root {
+    --font-color: #4A3120;
+    --header-color: #923332;
+    --main-green: #93DA9D;
+    --bg-color: #4d96b9;
+    --dark-green: rgb(89, 180, 101);
+
+
+    --header-font: 'Cabin Sketch', sans-serif;
+    --text-font: 'Sniglet', sans-serif;
+    --tree-name-font: 'Chewy', sans-serif;
+}
+
+
+
+/* ----------------------------- */
+/*---Reset margins and padding--*/
+/* --------------------------- */
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/* ------------------- */
+/*---Body Styling---*/
+/* ------------------- */
+
+body {
+    background-color: var(--main-green);
+    letter-spacing: 0.2rem;
+}
+
+.container {
+    max-width: 1280px;
+    margin: auto;
+  }
+
+.quiz-section {
+    display: flex;
+    flex-direction: column;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-bottom: 2rem;
+}
+
+
+
+/* ------------------- */
+/*-------Header--------*/
+/* ------------------- */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-family: var(--header-font);
+    font-size: 7rem;
+    font-weight: bold;
+    color: var(--header-color);
+}
+
+.home-btn {
+    width: 160px;
+    aspect-ratio: 1 / 1;
+    margin-top: 1rem;
+    flex: 0 0 auto;
+    animation: pulse 2s ease-in-out infinite alternate;
+}
+
+@keyframes pulse {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.1);
+    }
+}
+
+.home-btn img {
+    width: 100%;
+}
+
+
+
+/* ------------------- */
+/*-----Quiz Window-----*/
+/* ------------------- */
+
+.quiz-splitscreen {
+    display: flex;
+    justify-content:space-around;
+    width: 100%;
+    gap: 1rem;
+}
+
+
+
+/* -------------------- */
+/*---Question Section---*/
+/* -------------------- */
+
+.question-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* Splits page into 6 equal columns */
+
+    /* Places respective elements into the specified grid column,
+    making it easier to rearrange elements when adjusting for screen size */
+    grid-template-areas:    "question question question question question question"
+                            "image image image answer answer answer"
+                            ". . button button . .";
+    gap: 1.5rem;
+    flex-shrink: 0;
+    background-color: var(--dark-green);
+    width: 70%;
+    padding: 1.5rem;
+    border-radius: 3vw;
+}
+
+.question,
+.reaction-text,
+.score-keeper p {
+    font-family: var(--tree-name-font);
+    color: var(--font-color);
+    font-size: 3rem;
+}
+
+.question {
+    grid-area: question;
+}
+
+.quiz-image {
+    grid-area: image;
+    border-radius: 25px;
+    width: 100%;
+}
+
+.answer-list {
+    grid-area: answer;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+}
+
+.answer {
+    font-family: var(--text-font);
+    font-size: 1.5rem;
+    color: white;
+    background-color: var(--bg-color);
+    padding: 1rem;
+    border: 5px solid var(--font-color);
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.answer:hover {
+    background-color: #337291;
+
+}
+
+.character-face {
+    width: 30vw;
+}
+
+.reaction {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.reaction-text {
+    text-align: center;
+    height: 100%;
+
+}
+
+
+
+/* -------------------- */
+/*---------Score--------*/
+/* -------------------- */
+
+.score-keeper,
+.reaction-text {
+    margin: 1.5rem auto;
+}
+
+.score-keeper {
+    grid-area: button;
+}
+
+
+
+/* ------------------- */
+/*-End Message Screen--*/
+/* ------------------- */
+
+.end-screen {
+    display: none;
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--bg-color);
+    z-index: 20;
+    color: var(--font-color);
+    font-family: var(--text-font);
+}
+
+.end-screen.show {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.end-screen-image {
+    width: 30vw;
+}
+
+.end-text {
+    width: 70vw;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: clamp(1.5rem, 4vw, 3rem);
+}
+
+button {
+    all: unset;
+    cursor: pointer;
+    transition: 0.3s ease-out;
+}
+
+button:hover,
+button:focus {
+    transform: scale(1.2);
+}
+
+button img {
+    width: 150px;
+    animation: rotate 5s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(359deg);
+    }
+}
+
+
+
+/* ------------------- */
+/*----Media Queries----*/
+/* ------------------- */
+
+@media screen and (max-width: 1080px) {
+    h1 {
+        font-size: 5rem;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .quiz-splitscreen {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .question-grid {
+        grid-template-areas:    ". image image image image ."
+                                "question question question question question question"
+                                "answer answer answer answer answer answer"
+                                ". button button button button .";
+    
+        width: 100vw;
+        border-radius: 0;
+    }
+
+    .question {
+        text-align: center;
+    }
+
+    .answer-list {
+        text-align: center;
+    }
+
+    .reaction {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .reaction-text {
+        width: 50vw;
+    }
+}
+
+@media screen and (max-width: 620px) {
+    header {
+        align-items: flex-start;
+    }
+
+    h1 {
+        font-size: 4rem;
+    }
+
+    .home-btn {
+        width: 140px;
+    }
+
+    button img {
+        width: 150px;
+    }
+}
+
+
+
+
+@media screen and (max-width: 450px) {
+    .question,
+    .reaction-text,
+    .score-keeper p {
+    font-size: 2rem;
+    }
+
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+}

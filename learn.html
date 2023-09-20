@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Learn about some of the trees you can find around Scotland">
+    <meta name="author" content="Joseph Kockaya">
+    <meta name="keywords" content="nature, learning, education, scottish trees, trees">
+    <title>Learn - Tilly's Treehouse</title>
+    <link rel="icon" type="image/x-icon" href="icons/favicon.png">
+    <link rel="stylesheet" href="css/learn.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@700&family=Chewy&family=Sniglet&display=swap" rel="stylesheet">
+    <script defer src="scripts/learn.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+
+            <h1>Learn About Trees</h1>
+            
+            <!-- Home Button -->
+            <a class="home-btn" href="index.html"><img src="icons/home-icon.png" alt="Home"></a>
+            
+        </header>
+
+        <div class="tree-picker">
+
+            <!-- Dropdown element for tree selection -->
+            <label for="treeSelect">Pick a tree:</label>
+
+            <select name="trees" id="treeSelect" class="trees white-text">
+                <option value="0">Ash</option>
+                <option value="1">Beech</option>
+                <option value="2">Hazel</option>
+                <option value="3">Lodgepole Pine</option>
+                <option value="4">Norway Spruce</option>
+                <option value="5">Oak</option>
+                <option value="6">Rowan</option>
+                <option value="7">Scots Pine</option>
+                <option value="8">Silver Birch</option>
+                <option value="9">Sycamore</option>
+                <option value="10">Western Hemlock</option>
+                <option value="11">Wild Cherry</option>
+                <option value="12">Yew</option>
+            </select>
+
+        </div>
+
+        <section class="tree-info">
+
+            <div class="tree-images">
+                
+                <!-- Image container for selected tree -->
+                <div class="image-window" id="imageWindow">
+
+                    <img width="300" id="treeImage" src="images/ash-tree.jpg" alt="Ash tree">
+                    <img hidden width="300" id="leafImage" src="images/ash-tree-leaf.jpg" alt="Ash leaf">
+
+                </div>
+
+                <!-- Buttons to switch between tree and leaf images -->
+                <div class="image-buttons">
+
+                    <button id="treeImageBtn" class="tree-image-button">
+                        <img class="leaf-button-image" src="icons/tree.png" alt="Tree">
+                    </button>
+
+                    <button id="leafImageBtn" class="tree-image-button">
+                        <img class="leaf-button-image" src="icons/leaf.png" alt="Leaf">
+                    </button>
+
+                </div>
+            </div>
+
+            <!-- Contextual text based on selected tree -->
+            <div class="tree-text">
+
+                <h2 class="tree-name" id="treeName">Ash</h2>
+
+                <p class="tree-fact" id="fact1">Ash trees grow very tall, up to 40 metres high!</p>
+
+                <p class="tree-fact" id="fact2">The wood is used to make handles for tools and sports equipment.</p>
+
+                <p class="tree-fact" id="fact3">This tree can live for 200 years.</p>
+
+            </div>
+
+        </section>
+
+        <!-- Challenge prompt button -->
+        <button class="challenge-prompt-btn white-text" id="challengeBtn">
+            <img class="tilly-smile-image" src="graphics/tilly-happy-face-shadow.png" alt="Tilly">
+            <span>Find a tree for Tilly!</span>
+        </button>
+
+    </div>
+
+    <!-- Screen presenting a tree for users to find. Only visible when 'inactive' class removed. -->
+    <div class="challenge-screen inactive" id="challengeScreen">
+
+        <!-- Exit button for challenge screen. -->
+        <button id="closeBtn" class="close-btn">
+            <img src="icons/close-icon.svg" width="70" alt="Close">
+        </button>
+
+        <div class="flex-container">
+
+            <object class="character" type="image/svg+xml" data="graphics/tilly-main.svg">
+                <img src="graphics/tilly-main.png" alt="Tilly Squirrel">
+            </object>
+
+            <div class="text white-text">
+                <p>
+                    Help Tilly find a tree to play on.
+                </p>
+
+                <p>
+                    Look in a nearby park or forest to see if you can find this tree:
+                    <span class = "challenge-text" id="challengeText"></span>
+                </p>
+
+                <div class="challenge-image-container">
+                    <div class="challenge-image" id="challengeImage1"></div>
+                    <div class="challenge-image" id="challengeImage2"></div>
+                </div>
+            </div>
+
+         </div>
+
+    </div>
+    
+</body>
+</html>

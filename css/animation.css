@@ -1,0 +1,179 @@
+/* -----------------
+--------Sun---------
+-------------------- */
+
+#Sun-Rays {
+    transform-origin: center;
+    animation: rotation 10s linear infinite;
+}
+
+/* -----------------
+--------Moon---------
+-------------------- */
+
+.moon {
+  transform-origin: center;
+  animation: moon-rock 2s ease-in-out infinite alternate;
+}
+
+.stars {
+  transform-origin:30% 35%;
+  animation: rotation 20s linear infinite;
+}
+
+
+/* -----------------
+-------Tilly--------
+-------------------- */
+
+/* Ears */
+.left-ear.animated {
+    transform-box: fill-box;
+    transform-origin: bottom;
+    animation: left-ear-wiggle 0.4s ease-in-out ;
+}
+  
+.right-ear.animated {
+    transform-box: fill-box;
+    transform-origin: bottom;
+    animation: right-ear-wiggle 0.4s ease-in-out 1;
+}
+
+/* Eyes */
+.right-eye.animated,
+.left-eye.animated {
+    animation: blink 0.2s ease-out;
+    transform-box: fill-box;
+    transform-origin: 50% 50%;
+}
+
+/* Tail/Arms */
+.tail,
+.right-arm,
+.left-arm {
+    transform-box: fill-box;
+}
+
+.tail {
+    transform-origin: bottom left;
+    animation: tail-wag 0.5s ease-in-out infinite alternate;
+}
+
+.right-arm.animated {
+    transform-origin: top left;
+    animation: right-arm 0.5s ease-out 1 alternate;
+}
+
+.left-arm.animated {
+    transform-origin: top right;
+    animation: left-arm 0.5s ease-out 1 alternate;
+}
+
+
+
+
+/* -----------------
+-----Keyframes-----
+-------------------- */
+
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(359deg);
+    }
+}
+
+@keyframes moon-rock {
+  from {
+    transform: rotate(10deg);
+  }
+  to {
+    transform: rotate(-10deg);
+  }
+}
+
+@keyframes left-arm {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+     transform: rotate(-5deg);
+  }
+  80% {
+     transform: rotate(2deg);
+  }
+  100% {
+     transform: rotate(0deg);
+  }
+}
+
+@keyframes right-arm {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+       transform: rotate(5deg);
+    }
+    80% {
+       transform: rotate(-2deg);
+    }
+    100% {
+       transform: rotate(0deg);
+    }
+  }
+
+@keyframes tail-wag {
+  from {
+    transform: rotate(-10deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes left-ear-wiggle {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(20deg);
+    }
+    75% {
+      transform: rotate(-10deg)
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  
+@keyframes right-ear-wiggle {
+     0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(-20deg);
+    }
+    75% {
+      transform: rotate(10deg)
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  
+@keyframes blink {
+    0% {
+      transform: scaleY(1);
+    }
+    50% {
+      transform: scaleY(0);
+    }
+    100% {
+      transform: scaleY(1);
+    }
+  }
+  
+  

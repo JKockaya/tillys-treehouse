@@ -1,0 +1,340 @@
+/* ------------------- */
+/*---Global Variables--*/
+/* ------------------- */
+
+:root {
+    --font-color: #4A3120;
+    --header-color: #923332;
+    --main-green: #93DA9D;
+    --bg-color: #4d96b9;
+
+
+    --header-font: 'Cabin Sketch', sans-serif;
+    --text-font: 'Sniglet', sans-serif;
+}
+
+
+
+/* ----------------------------- */
+/*---Reset margins and padding--*/
+/* --------------------------- */
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/* ------------------- */
+/*---Element Styling---*/
+/* ------------------- */
+
+body {
+    background-color: var(--main-green);
+}
+
+.container {
+    max-width: 1280px;
+    margin: auto;
+    height: 100vh;
+  }
+
+
+
+/* ------------------- */
+/*-------Header--------*/
+/* ------------------- */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+
+
+h1 {
+    font-family: var(--header-font);
+    font-size: 7rem;
+    font-weight: bold;
+    color: var(--header-color);
+}
+
+.home-btn {
+    width: 160px;
+    aspect-ratio: 1 / 1;
+    margin-top: 1rem;
+    flex: 0 0 auto;
+    animation: pulse 2s ease-in-out infinite alternate;
+}
+
+@keyframes pulse {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.1);
+    }
+}
+
+.home-btn img {
+    width: 100%;
+}
+
+
+
+/* ------------------- */
+/*-----Game Board------*/
+/* ------------------- */
+
+.game-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 2rem;
+    margin-right: 7rem;
+}
+
+.gameboard {
+    position: relative;
+    width: 600px;
+    flex-shrink: 0;
+}
+
+.game-bg {
+    width: 100%;
+}
+
+.square {
+    width: 113.5px;
+    height: 113.8px;
+    cursor: pointer;
+}
+
+.play-area {
+    width: 418.8px;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-items: center;
+    align-items: center;
+    gap: 38.8px;
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    z-index: 10;
+    background-image: url(../graphics/play-area-bg.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: scale(0.8);
+}
+
+/* Player Icon Setup */
+.square.acorn,
+.play-area.acorn .square:not(.acorn):not(.sticks):hover {
+    background-image: url(../icons/acorn.png);
+    background-size: 100px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.play-area.acorn .square:not(.acorn):not(.sticks):hover {
+    opacity: 0.5;
+}
+
+.square.sticks,
+.play-area.sticks .square:not(.acorn):not(.sticks):hover {
+    background-image: url(../icons/sticks.png);
+    background-size: 100px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.play-area.sticks .square:not(.acorn):not(.sticks):hover {
+    opacity: 0.5;
+}
+
+.square.acorn, .square.sticks {
+    cursor: not-allowed;
+}
+
+
+
+/* ------------------- */
+/*---Turn Indicator----*/
+/* ------------------- */
+
+.turn-indicator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.turn-icon {
+    width: 250px;
+    aspect-ratio: 1 / 1;
+    background-color: var(--bg-color);
+    padding: 1rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.turn-icon img {
+    width: 60%;
+    cursor:grab;
+    transition: transform 0.5s ease-in-out;
+}
+
+.turn-icon img:hover,
+.turn-icon img:focus {
+    transform: scale(1.2);
+}
+
+.turn-text {
+    font-family: var(--text-font);
+    color: var(--font-color);
+    font-size: 3rem;
+}
+
+
+
+/* ------------------- */
+/*-Win Message Screen--*/
+/* ------------------- */
+
+.win-screen {
+    display: none;
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--bg-color);
+    z-index: 20;
+    color: var(--font-color);
+    font-family: var(--text-font);
+    font-size: 4rem;
+}
+
+.win-screen.show {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    all: unset;
+    cursor: pointer;
+    transition: 0.3s ease-out;
+}
+
+button:hover,
+button:focus {
+    transform: scale(1.2);
+}
+
+button img {
+    width: 200px;
+    animation: rotate 5s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(359deg);
+    }
+}
+
+
+
+/* ------------------- */
+/*----Media Queries----*/
+/* ------------------- */
+
+@media screen and (min-width: 1200px) {
+    .game-section {
+        justify-content: center;
+        gap: 5rem;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    h1 {
+        font-size: 5rem;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .gameboard {
+        width: 500px;
+    }
+
+    .play-area {
+        transform: scale(0.7);
+        top: 50px;
+        left: 50px;
+    }
+}
+
+@media screen and (max-width: 920px) {
+    .game-section {
+        flex-direction: column-reverse;
+        margin: 0;
+        margin-top: 3rem;
+    }
+
+    .turn-indicator {
+        flex-direction: row;
+        gap: 3rem;
+    }
+}
+
+@media screen and (max-width: 620px) {
+    h1 {
+        font-size: 4rem;
+    }
+
+    header {
+        align-items: flex-start;
+    }
+
+    .home-btn {
+        width: 140px;
+    }
+
+    .gameboard {
+        width: 400px;
+    }
+
+    .play-area {
+        transform: scale(0.5);
+        top: -5px;
+        left: -5px;
+    }
+
+    .turn-indicator {
+        gap: 1rem;
+    }
+
+    .turn-icon {
+        width: 150px;
+    }
+
+    .turn-text {
+        font-size: 2rem;
+    }
+
+    button img {
+        width: 150px;
+    }
+}

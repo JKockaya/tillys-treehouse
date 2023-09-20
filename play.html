@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Play a game of Acorns & Sticks with Tilly">
+    <meta name="author" content="Joseph Kockaya">
+    <meta name="keywords" content="nature, learning, education, scottish trees, trees, games,
+                tic-tac-toe, games for toddlers">
+    <title>Play - Tilly's Treehouse</title>
+    <link rel="icon" type="image/x-icon" href="icons/favicon.png">
+    <link rel="stylesheet" href="css/play.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@700&family=Sniglet&display=swap" rel="stylesheet">
+    <script defer src="scripts/play.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>Acorns and Sticks</h1>
+    
+            <a class="home-btn" href="index.html"><img src="icons/home-icon.png" alt="Home"></a>
+        </header>
+
+        <section class="game-section">
+
+            <!-- Area where interactive cells will be -->
+            <div class="gameboard">
+
+                <img class="game-bg" src="graphics/game-board.png" width="600" alt="Game Board">
+                
+                <!-- Individual cells for player markers -->
+                <div class="play-area" id="playArea">
+
+                    <div
+                        class="square" data-square
+                        ondragover="onDragOver(event)" ondrop="onDrop(event)">
+                    </div>
+
+                    <div
+                        class="square" data-square
+                        ondragover="onDragOver(event)" ondrop="onDrop(event)">
+                    </div>
+
+                    <div
+                        class="square" data-square
+                        ondragover="onDragOver(event)" ondrop="onDrop(event)">
+                    </div>
+
+                    <div
+                        class="square" data-square
+                        ondragover="onDragOver(event)" ondrop="onDrop(event)">
+                    </div>
+
+                    <div
+                        class="square" data-square
+                        ondragover="onDragOver(event)" ondrop="onDrop(event)">
+                    </div>
+
+                    <div
+                        class="square" data-square
+                        ondragover="onDragOver(event)" ondrop="onDrop(event)">
+                    </div>
+
+                    <div
+                        class="square" data-square
+                        ondragover="onDragOver(event)" ondrop="onDrop(event)">
+                    </div>
+
+                    <div
+                        class="square" data-square
+                        ondragover="onDragOver(event)" ondrop="onDrop(event)">
+                    </div>
+
+                    <div
+                        class="square" data-square
+                        ondragover="onDragOver(event)" ondrop="onDrop(event)">
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- This section will show the icon for the current player -->
+            <div class="turn-indicator"> 
+
+                <!-- Both the icon and the player text will be populated using JS -->
+                <div class="turn-icon" id="turnIcon">
+
+                </div>
+
+                <p class="turn-text" id="turnText"></p>
+
+            </div>
+
+        </section>
+
+        <!-- Win screen will only show on win/draw conditions by adding visibility class-->
+        <div class="win-screen" id="winScreen">
+            <img class="game-result-image" src="graphics/tilly-happy-face.svg" width="400" alt="Tilly smiling">
+            <div data-win-screen-text></div>
+            <button id="restartBtn"><img src="icons/restart.svg" width="200" alt="Restart"></button>
+        </div>
+
+    </div>
+    
+</body>
+
+</html>

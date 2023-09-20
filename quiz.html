@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="How well do you know Scotland's trees?">
+    <meta name="author" content="Joseph Kockaya">
+    <meta name="keywords" content="trees, nature, scotland, scottish trees, quiz, 
+                                    sites for toddlers, learning, education">
+    <title>What's that tree? - Tilly's Treehouse</title>
+    <link rel="icon" type="image/x-icon" href="icons/favicon.png">
+    <link rel="stylesheet" href="css/quiz.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@700&family=Chewy&family=Sniglet&display=swap" rel="stylesheet">
+    <script defer src="scripts/quiz.js"></script>
+</head>
+<body>
+
+    <div class="container">
+
+        <header>
+
+            <h1>What's that tree?</h1>
+
+            <a class="home-btn" href="index.html"><img src="icons/home-icon.png" alt="Home"></a>
+
+        </header>
+
+        <main>
+
+            <section class="quiz-section">
+
+                <div class="quiz-splitscreen">
+
+                    <!-- Question and answers displayed here -->
+                    <div class="question-grid">
+
+                        <p class="question" id="question">What tree is this leaf from?</p>
+
+                        <img class="quiz-image" id="quizImage" src="images/ash-tree-leaf.jpg"
+                           width="300" alt="What tree is this leaf from?">
+
+                        <!-- Answers populated using JS object value -->
+                        <ul class="answer-list">
+                            <li class="answer">Answer 1</li>
+                            <li class="answer">Answer 2</li>
+                            <li class="answer">Answer 3</li>
+                        </ul>
+
+                        <div class="score-keeper">
+                            <p>Score: <span id="scoreElement"></span></p> <!--Score display-->
+                        </div>
+
+                    </div>
+                    
+                    <!-- Tilly's face will change depending on whether answer is correct or not -->
+                    <div class="reaction">
+                        <object class="character-face" id="characterFace" type="image/svg+xml"
+                                data="graphics/tilly-normal-face-quiz.svg" role="presentation">
+                            
+                                <img src="graphics/tilly-happy-face-shadow.png" alt="Tilly Squirrel">
+
+                        </object>
+
+                        <div class="reaction-text" id="reactionText"></div>
+                    </div>
+                </div>
+
+            </section>
+
+        </main>
+
+        <!-- End screen - will be visible once 10 question have been answered -->
+        <div class="end-screen" id="endScreen">
+
+            <img class="end-screen-image" src="graphics/tilly-happy-face.svg" alt="Tilly">
+
+            <div class="end-text" id="endScreenText">
+        
+            </div>
+
+            <button id="restartBtn"><img src="icons/restart.svg" width="200" alt="Restart"></button>
+
+        </div>
+
+    </div>
+    
+</body>
+</html>
